@@ -42,7 +42,7 @@ export const Footer: React.FC = () => {
             <div className="pt-2">
               <Link to="/about-demo">
                 <Button variant="accent" size="sm">
-                  Review Proposal & Milestones
+                  Review Proposal & Next Steps
                 </Button>
               </Link>
             </div>
@@ -80,7 +80,7 @@ export const Footer: React.FC = () => {
               Start Project Inquiry
             </div>
             <p className="text-[11px] text-white/60 mb-3">
-              Direct communication for milestone setup & testing.
+              Direct communication for requirements & testing.
             </p>
 
             {isSent ? (
@@ -134,7 +134,7 @@ export const Footer: React.FC = () => {
               <span className="w-1.5 h-1.5 rounded-full bg-accent" />
               Interactive prototype · simulated device
             </span>
-            <span>All rights and IP transfer to client upon milestone acceptance</span>
+            <span>All rights and IP transfer to client upon project acceptance</span>
           </div>
 
           <div className="flex items-center gap-4">

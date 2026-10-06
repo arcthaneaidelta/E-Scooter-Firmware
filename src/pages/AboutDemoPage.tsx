@@ -1,64 +1,9 @@
 import React from 'react';
 import { Button } from '../components/ui/Button';
-import { CheckCircle2, Shield, Calendar, CreditCard, Clock, FileCheck, ArrowRight, UserCheck } from 'lucide-react';
+import { CheckCircle2, Shield, Clock, FileCheck, ArrowRight, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const AboutDemoPage: React.FC = () => {
-  const milestones = [
-    {
-      num: '01',
-      title: 'Compatibility Matrix & Base64 Package Format',
-      duration: '4–5 Days',
-      amount: '€750',
-      status: 'Assumption — adjust',
-      details: [
-        'Complete mapping of supported Xiaomi & Ninebot models by ESC hardware revision',
-        'Standardized JSON/Base64 package schema with SHA-256 digests and ED25519 signatures',
-        'Parameter address offsets (speed limits, phase current bounds, KERS profiles)',
-        'Delivery of preliminary command blocks for verified baseline versions',
-      ],
-    },
-    {
-      num: '02',
-      title: 'Safety Architecture & Rollback Engine',
-      duration: '6–7 Days',
-      amount: '€1,200',
-      status: 'Assumption — adjust',
-      details: [
-        'Pre-flight gatekeeper (model UUID check, battery ≥30% interlock, temp limits)',
-        'Automatic OEM flash backup routine before memory writes',
-        'Atomic block transfer logic with 1-tap "Restore to Stock" capability',
-        'Mid-write connection loss safe abort handler (zero brick risk on severed link)',
-      ],
-    },
-    {
-      num: '03',
-      title: 'Documentation Hub & Validation Test Report',
-      duration: '4–5 Days',
-      amount: '€850',
-      status: 'Assumption — adjust',
-      details: [
-        'Comprehensive Web Bluetooth integration guide for your storefront',
-        'Full test suite report (CRC32, boundary clamping, RF noise recovery)',
-        'Private property compliance audit guide and legal limit mappings',
-        'Step-by-step developer troubleshooting documentation',
-      ],
-    },
-    {
-      num: '04',
-      title: 'On-Hardware Acceptance Testing on Luca’s Scooter & Full Rights Transfer',
-      duration: '3–4 Days',
-      amount: '€700',
-      status: 'Final Gate',
-      details: [
-        'Live testing on Luca’s physical test scooter with Web Bluetooth activation page',
-        'Verification of top speed adjustment (25 -> 45 km/h on private grounds) and stock restore',
-        'Complete transfer of all copyright, repository source code, and commercial rights',
-        'Final milestone payout triggered solely upon Luca’s satisfaction and physical test pass',
-      ],
-    },
-  ];
-
   return (
     <div className="py-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-left">
       {/* Header */}
@@ -70,7 +15,7 @@ export const AboutDemoPage: React.FC = () => {
           About This Interactive Demo
         </h1>
         <p className="text-xs sm:text-sm text-text-secondary mt-1 max-w-2xl">
-          Built as an engineering prototype for Luca’s "Scooter Software Development" job posting. Demonstrates architectural maturity, safety safeguards, and transparent milestone alignment.
+          Built as an engineering prototype for Luca’s "Scooter Software Development" job posting. Demonstrates architectural maturity, safety safeguards, and collaborative alignment.
         </p>
       </div>
 
@@ -114,7 +59,7 @@ export const AboutDemoPage: React.FC = () => {
             In strict compliance with professional engineering standards, this prototype operates with high-fidelity scripted simulators and mock memory tables. It contains zero live device protocol exploits and zero proprietary firmware blobs.
           </p>
           <p>
-            Real base64 command packets and production BLE communication logic will be authored exclusively for you under the milestone agreement, with full IP rights assigned to you upon delivery.
+            Real base64 command packets and production BLE communication logic will be authored exclusively for you under our project agreement, with full IP rights assigned to you upon delivery.
           </p>
         </section>
 
@@ -162,7 +107,7 @@ export const AboutDemoPage: React.FC = () => {
                 3) Rough timeline and price?
               </h3>
               <p className="text-text-secondary leading-relaxed">
-                Total estimated duration: <strong>17–20 business days</strong>. Total project price: <strong>€3,500</strong>, distributed across 4 milestone gates. Payments are tied strictly to deliverable verification, with the final payment reserved until physical testing on your scooter succeeds.
+                We can hop on a quick 5-min meet to better understand all the requirements you have, and then I will be able to give you the budget, timeline, and the milestones.
               </p>
             </div>
 
@@ -177,50 +122,49 @@ export const AboutDemoPage: React.FC = () => {
           </div>
         </section>
 
-        {/* Section 4: Milestone Payment Schedule */}
+        {/* Section 4: Next Steps - 5-min alignment call */}
         <section className="bg-surface-elevated p-6 sm:p-8 rounded-[20px] border border-border shadow-sm space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div>
               <span className="text-xs font-mono uppercase tracking-wider text-accent font-semibold">
-                Payment Schedule
+                Next Steps
               </span>
               <h2 className="font-display text-2xl text-ink font-normal mt-1">
-                Milestone Plan (Mirrors Luca’s Conditions)
+                Quick 5-Minute Alignment Call
               </h2>
             </div>
-            <div className="font-mono text-sm font-semibold text-ink bg-secondary px-3 py-1.5 rounded-[8px] border border-border">
-              Total: €3,500 (4 Gates)
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono text-primary bg-secondary px-3 py-1.5 rounded-[8px] border border-border">
+              <Clock className="w-3.5 h-3.5 text-accent" />
+              <span>5 Min Intro</span>
             </div>
           </div>
 
-          <div className="space-y-4">
-            {milestones.map((m) => (
-              <div key={m.num} className="bg-surface p-5 rounded-[14px] border border-border space-y-3">
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-border pb-3">
-                  <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-full bg-primary text-white flex items-center justify-center font-mono text-xs font-semibold">
-                      {m.num}
-                    </span>
-                    <h3 className="font-display text-base text-ink font-normal">{m.title}</h3>
-                  </div>
-                  <div className="flex items-center gap-3 font-mono text-xs">
-                    <span className="text-text-muted">{m.duration}</span>
-                    <span className="font-bold text-accent">{m.amount}</span>
-                  </div>
-                </div>
+          <p className="text-text-secondary leading-relaxed">
+            We can hop on a quick 5-min meet to better understand all the requirements you have, and then I will be able to give you the budget, timeline, and the milestones tailored to your shop:
+          </p>
 
-                <ul className="space-y-1 text-xs text-text-secondary list-disc list-inside">
-                  {m.details.map((d, i) => (
-                    <li key={i}>{d}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div className="bg-surface p-4 rounded-[12px] border border-border space-y-1">
+              <div className="font-semibold text-ink text-xs">1. Target Scooter Models & Prioritization</div>
+              <p className="text-[11px] text-text-muted">Confirm which specific models and versions your shop wants to support first.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-[12px] border border-border space-y-1">
+              <div className="font-semibold text-ink text-xs">2. Web Bluetooth Frontend Hooks</div>
+              <p className="text-[11px] text-text-muted">Review how the base64 command blocks will ingest into your existing activation page.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-[12px] border border-border space-y-1">
+              <div className="font-semibold text-ink text-xs">3. Hardware Verification on Your Scooter</div>
+              <p className="text-[11px] text-text-muted">Align on testing on your personal scooter as the final acceptance gate.</p>
+            </div>
+            <div className="bg-surface p-4 rounded-[12px] border border-border space-y-1">
+              <div className="font-semibold text-ink text-xs">4. Budget, Timeline & Milestones</div>
+              <p className="text-[11px] text-text-muted">Establish an exact, transparent timeline and milestone schedule based on agreed scope.</p>
+            </div>
           </div>
 
           <div className="pt-4 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-4">
             <span className="text-xs text-text-muted">
-              Ready to initialize Milestone 1 upon confirmation.
+              Ready to connect whenever works best for you.
             </span>
             <Link to="/activate">
               <Button variant="accent" size="md" rightIcon={<ArrowRight className="w-4 h-4" />}>

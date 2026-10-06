@@ -34,7 +34,7 @@ export const TestReportPage: React.FC = () => {
 Generated: ${reportGeneratedTime}
 Status: 48/48 Evaluated (46 PASS, 2 PASS WITH NOTE, 0 REGRESSIONS)
 Tested Models: Xiaomi Pro 2, Ninebot Max G30, Xiaomi Mi 3, Ninebot F40
-All rights transferred to client upon final milestone acceptance.`;
+All rights transferred to client upon final project acceptance.`;
 
     const blob = new Blob([content], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
